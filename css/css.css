@@ -1,0 +1,29 @@
+#telaConexao{
+    width: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 1px 5px 30px rgba(25, 23, 46, 0.39);
+    
+}
+
+#fundo{
+    
+    background-image: url(../img/fundoa.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+}
+
+#telaGrafico{
+    width: 1100px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 1px 5px 30px rgba(25, 23, 46, 0.39);
+    
+}
