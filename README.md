@@ -1,2 +1,2 @@
 # Zenith
-Ferramento de apoio à visualização de dados.
+Ferramenta de apoio à visualização de dados.
