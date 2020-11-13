@@ -1,0 +1,51 @@
+.menu {
+    margin-top: -16px;
+    background: #000;
+}
+.menu .menu-list{
+
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+}
+
+.menu > .menu-list > li {
+    float: left;
+    position
+    : relative;
+}
+.menu img {
+    height: 30px;
+}
+
+.menu > .menu-list > li > a {
+    padding: 20px;
+    margin: 0 5px;
+    background: #000;
+    margin-top: 5px;
+
+}
+
+
+
+.menu > .menu-list > li:hover a {
+    background: gray;
+}
+
+.menu:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
