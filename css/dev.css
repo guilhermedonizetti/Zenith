@@ -43,10 +43,13 @@ body
       border: 5px double black;
       margin-right: 10px ;
       
+<<<<<<< HEAD
       margin-top: 5px;
       margin-bottom: 5px;
       margin-right: 10px ;
       margin-left: 10px;
+=======
+>>>>>>> 8c462cf2f852b696d90142255909e9f03fe41ffc
     }
   .dev4 { 
       grid-area: dev4; 
