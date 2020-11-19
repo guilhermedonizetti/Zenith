@@ -2,6 +2,7 @@ body
 {
     margin:0 auto;
     padding: 0 auto;
+    background-color: whitesmoke;
 }
 
 .grid-container {
@@ -19,28 +20,41 @@ body
 
       border: 5px double black;
 
-      margin-bottom: 2px;
+      margin-top: 5px;
+      margin-bottom: 5px;
       margin-right: 10px ;
       margin-left: 10px;
  }
   .dev2 {
        grid-area: dev2; 
        
-       margin-bottom: 2px;
+     
        margin-right: 10px;
+       margin-top: 5px;
+      margin-bottom: 5px;
       border: 5px double black;
     }
+
+   
+    
   .dev3 {
        grid-area: dev3; 
        
       border: 5px double black;
       margin-right: 10px ;
-      marg
+      
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 10px ;
+      margin-left: 10px;
     }
   .dev4 { 
       grid-area: dev4; 
       
       border: 5px double black;
+      margin-right: 10px;
+      margin-top: 5px;
+     margin-bottom: 5px;
     }
 
   #pic-dev
@@ -48,4 +62,11 @@ body
       width: 150px;
       height: 150px;
       border-radius: 3.2rem;
+      margin-left: 10px;
   }
+
+  #dev-name {
+    margin-left: 50%;
+    
+    font-size: 20px;
+    font-family: verdana;
