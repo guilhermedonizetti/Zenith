@@ -23,6 +23,9 @@ body
       margin-right: 10px ;
       margin-left: 10px;
  }
+  #nome-dev {
+   margin-left: 45%;
+ }
   .dev2 {
        grid-area: dev2; 
        
@@ -35,12 +38,14 @@ body
        
       border: 5px double black;
       margin-right: 10px ;
+      margin-left: 10px;
       
     }
   .dev4 { 
       grid-area: dev4; 
       
       border: 5px double black;
+      margin-right: 10px;
     }
 
   #pic-dev
