@@ -65,13 +65,25 @@ body
    
    
     }
+    .grid-container #pic-dev {
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 1px;
+        margin-left: 270px;
+        margin-right: 6px;
+    }
+    .grid-container #dev-name{
+      margin-left: 270px;
+    }
 
   #pic-dev
   {
+      
       width: 150px;
       height: 150px;
       border-radius: 3.2rem;
       margin-left: 10px;
+    
   }
 
   #dev-name {
