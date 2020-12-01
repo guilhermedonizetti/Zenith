@@ -2,6 +2,7 @@ body
 {
     margin:0 auto;
     padding: 0 auto;
+    background-color: whitesmoke;
 }
 
 .grid-container {
@@ -12,6 +13,9 @@ body
     grid-template-areas:
       "dev1 dev2"
       "dev3 dev4";
+
+      
+      
   }
   .dev1 { 
       grid-area: dev1;
@@ -19,9 +23,11 @@ body
 
       border: 5px double black;
 
-      margin-bottom: 2px;
+      margin-top: 5px;
+      margin-bottom: 5px;
       margin-right: 10px ;
       margin-left: 10px;
+      border-radius: 2.2rem;
  }
   #nome-dev {
    margin-left: 45%;
@@ -29,10 +35,16 @@ body
   .dev2 {
        grid-area: dev2; 
        
-       margin-bottom: 2px;
+     
        margin-right: 10px;
+       margin-top: 5px;
+      margin-bottom: 5px;
       border: 5px double black;
+      border-radius: 2.2rem;
     }
+
+   
+    
   .dev3 {
        grid-area: dev3; 
        
@@ -40,6 +52,11 @@ body
       margin-right: 10px ;
       margin-left: 10px;
       
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 10px ;
+      margin-left: 10px;
+      border-radius: 2.2rem;
     }
   .dev4 { 
       grid-area: dev4; 
@@ -50,7 +67,18 @@ body
 
   #pic-dev
   {
+      
       width: 150px;
       height: 150px;
       border-radius: 3.2rem;
+      margin-left: 10px;
+    
+  }
+
+  #dev-name {
+    margin-left: 50%;
+    
+    font-size: 20px;
+    font-family: verdana;
+
   }
