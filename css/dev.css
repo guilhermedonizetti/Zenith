@@ -63,6 +63,7 @@ body
       
       border: 5px double black;
       margin-right: 10px;
+      border-radius: 2.2rem;
     }
 
   #pic-dev
