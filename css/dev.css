@@ -4,82 +4,93 @@ body
     padding: 0 auto;
     background-color: whitesmoke;
 }
+ 
+.dev {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 0.8rem;
+  margin-top: 2.4rem;
+}
+.dev header div strong{
+padding: 3rem 2rem;
+display: flex;
+align-items: center;
+margin-left: 90px;
+margin-top: -150px;
+}
 
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "dev1 dev2"
-      "dev3 dev4";
+.dev header img{
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
 
-      
-      
-  }
-  .dev1 { 
-      grid-area: dev1;
-      align-items: center;
+.dev header div {
+  margin-left: 2.4rem;
+}
+.dev header div strong {
+  font: 700 1.5rem "Press Start 2P";
+  display: block;
+  color: black;
+}
+.dev header div span{
 
-      border: 5px double black;
+  font-size: 1.6rem;  
+  display: block;
+  margin-top: 0.4rem;
+  margin-left: 150px;
+}
 
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-right: 10px ;
-      margin-left: 10px;
-      border-radius: 2.2rem;
- }
-  #nome-dev {
-   margin-left: 45%;
- }
-  .dev2 {
-       grid-area: dev2; 
-       
-     
-       margin-right: 10px;
-       margin-top: 5px;
-      margin-bottom: 5px;
-      border: 5px double black;
-      border-radius: 2.2rem;
-    }
+.dev > p {
+  
+  padding: 0 8rem;
+  font-size: 1.6rem;
+  line-height: 2.8rem;
 
-   
-    
-  .dev3 {
-       grid-area: dev3; 
-       
-      border: 5px double black;
-      margin-right: 10px ;
-      margin-left: 10px;
-      
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-right: 10px ;
-      margin-left: 10px;
-      border-radius: 2.2rem;
-    }
-  .dev4 { 
-      grid-area: dev4; 
-      
-      border: 5px double black;
-      margin-right: 10px;
-      border-radius: 2.2rem;
-    }
+}
+.dev footer{
+  padding: 3.2rem 2rem;
+  background-color: white;
+  border-top: 1px solid white;
+  margin-top: 3.2rem;
+  margin-left: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  #pic-dev
-  {
-      
-      width: 150px;
-      height: 150px;
-      border-radius: 3.2rem;
-      margin-left: 10px;
-    
-  }
+}
 
-  #dev-name {
-    margin-left: 50%;
-    
-    font-size: 20px;
-    font-family: verdana;
+.dev footer p {
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  color: white;
+}
+.dev footer p strong {
+  font-size: 1.6rem;
+  color: black;
+  display: block;
 
-  }
+}
+
+.dev footer .button{
+  width: 20rem;
+  height: 5.6rem;
+  background: white;
+  color: black;
+  border: 0;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  font: 700 1.4rem "Press Start 2P";
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  text-decoration: none;
+
+  transition: background 0.2s;
+  margin-left: 1.6rem;
+}
+.dev footer button:hover {
+  background: white;
+}
