@@ -40,7 +40,7 @@
         <ul class="menu-list">
           <li><a href="index.html"><img width="120px" height="50px" src="img/logo.png" alt="Zenith"></a></li>
           <li>
-            <a href="dashboard.php">Conexao</a>
+            <a href="dashboard.php">Dashboard</a>
           </li>
           <li>
             <a href="dev.html">Desenvolvedores</a>
@@ -141,42 +141,7 @@
       </main>
     </div>
   </div>
-  <div class="d-block d-sm-none">
-    <nav class="navbar fixed-bottom navbar-light bg-light">
-      <a class="navbar-brand" href="#">Ricardo</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-        <ul class="navbar-nav mr-auto">
-          <a class="nav-link active" href="?pagina">
-
-            Dashboard <span class="sr-only">(atual)</span>
-          </a>
-        </li>
-        <li class="nav-item" >
-          <a class="nav-link" href="?pagina=pedidos" style="text-decoration: none"> 
-
-            Pedidos
-          </a>
-        </li>
-        <!--<li class="nav-item">
-          <a class="nav-link" href="?pagina=clientes">
-
-            Cadastrar Clientes
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="?pagina=vendas">
-
-            Cadastrar Vendas
-          </a>
-        </li>-->
-
-      </ul>
-    </div>
-  </nav>
-</div> 
+  
 
     <!-- Principal JavaScript do Bootstrap
       ================================================== -->
