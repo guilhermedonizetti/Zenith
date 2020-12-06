@@ -72,7 +72,7 @@
            <li class="nav-item">
               <a class="nav-link" href="?pagina=dashvendas" style="color:#000;text-decoration: none"> 
 
-                <i class="fas fa-box"></i>&nbsp;<?php var_dump($linha) ?>
+                <i class="fas fa-table"></i>&nbsp;<?php var_dump($linha) ?>
               </a>
             </li>
          
