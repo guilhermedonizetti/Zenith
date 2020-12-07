@@ -63,16 +63,17 @@
             </li>
             
             <?php
-     include 'conexao.php';
-           $dados=$conexao->query("SHOW TABLES");
+     include 'connect.php';
+           $dados=$conn->query("SHOW TABLES");
         foreach($dados as $linha){  
-          
+        
      
         ?>
            <li class="nav-item">
               <a class="nav-link" href="?pagina=dashvendas" style="color:#000;text-decoration: none"> 
 
-                <i class="fas fa-table"></i>&nbsp;<?php var_dump($linha) ?>
+                <i class="fas fa-table"></i>
+                &nbsp;<?php echo $linha[0] ?>
               </a>
             </li>
          
