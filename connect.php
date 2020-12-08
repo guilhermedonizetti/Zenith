@@ -1,8 +1,9 @@
 <?php
 
-$database="dash1";
+$database="zenith";
 $root="root";
 $password="";
+
 
 
 $conn = new PDO('mysql:host=localhost;dbname='.$database.';',$root,$password);
