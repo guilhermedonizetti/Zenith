@@ -1,6 +1,6 @@
 <?php
 
-$database="zenith";
+$database="dash1";
 $root="root";
 $password="";
 

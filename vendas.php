@@ -12,13 +12,13 @@
           <?php 
 
           include 'conexao.php';
-          $sql = "SELECT * FROM clientes";
+          $sql = "SELECT * FROM vendas";
           $buscar = mysqli_query($conexao,$sql);
 
           while ($dados = mysqli_fetch_array($buscar)) {
 
-            $mes = $dados['mes_cliente'];
-            $quantidade = $dados['quantidade'];
+            $mes = $dados['mes_venda'];
+            $quantidade = $dados['qtd_venda'];
 
 
             ?>
@@ -30,7 +30,7 @@
 
         var options = {
           title: '',
-         // curveType: 'function',
+           curveType: 'function',
          legend: { position: 'none' }
        };
 
@@ -50,13 +50,13 @@
         <?php
 
         include 'conexao.php';
-        $sql = "SELECT * FROM vendas";
+        $sql = "SELECT * FROM  vendas";
         $buscar = mysqli_query($conexao,$sql);
 
         while ($dados = mysqli_fetch_array($buscar)) {
 
           $mes = $dados['mes_venda'];
-          $quantidade = $dados['quantidade_venda'];
+          $quantidade = $dados['qtd_venda'];
 
 
           ?>
@@ -94,7 +94,7 @@
           $buscar = mysqli_query($conexao,$sql);
 
           while ($dados = mysqli_fetch_array($buscar)) {
-            $quantidade = $dados['quantidade_venda'];
+            $quantidade = $dados['mes_venda'];
             $valor = $dados['valor_venda'];
          
           ?>
@@ -112,11 +112,11 @@
                        2]);
 
       var options = {
-        title: "População das Cidades",
+        title: "",
         //width: 900,
         height: 200,
-        bar: {groupWidth: "20%"},
-        legend: { position: "top" },
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" }
       };
       var chart = new google.visualization.ColumnChart(document.getElementById("graficoColuna"));
       chart.draw(view, options);
@@ -137,15 +137,15 @@
     <div class="row">
       <div class="col-md-6">
         <h4>Quantidade Venda</h4>
-        <div id="piechart" class="sombra"></div>
+        <div id="piechart" class="sombra" ></div>
       </div>
       <div class="col-md-6">
         <h4>Quantidade Venda</h4>
         <div id="graficoColuna" class="sombra"></div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-8" style="margin-top:25px">
         <h4>Gráfico de Clientes</h4>
-        <div id="curve_chart" class="sombra"></div>
+        <div id="curve_chart" class="sombra" style="width: 850px; margin-left:70px"></div>
       </div>
     </div>
   </div>

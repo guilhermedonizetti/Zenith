@@ -114,12 +114,13 @@
             break;
 
             case 'clientes':
-            include 'vendas.php';
+            include 'clientes.php';
             break;
 
             case 'vendas':
-
-            include 'cadastro_vendas.php';
+            
+            include 'dadosPanel.php';
+            include 'vendas.php';
             break;
             case 'dashclientes':
               echo '<h2> Dados dos Clientes</h2>';
