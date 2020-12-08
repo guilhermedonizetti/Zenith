@@ -112,7 +112,7 @@
                        2]);
 
       var options = {
-        title: "Quantidade de Clientes",
+        title: "",
         //width: 900,
         height: 200,
         bar: {groupWidth: "20%"},
@@ -130,6 +130,48 @@
     }
 
   </style>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Mês", "Quantidade", { role: "style" } ],
+        <?php
+
+          include 'conexao.php';
+          $sql = "SELECT * FROM clientes";
+          $buscar = mysqli_query($conexao,$sql);
+
+          while ($dados = mysqli_fetch_array($buscar)) {
+            $quantidade = $dados['mes_cliente'];
+            $valor = $dados['quantidade'];
+
+          ?>
+          ['<?php echo $quantidade ?>', <?php echo $valor ?>,'#000'],
+
+          <?php } ?>
+        ]);
+    
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "",
+        width: 300,
+        height: 200,
+        bar: {groupWidth: "65%"},
+        legend: { position: "top" },
+      };
+      var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
 </head>
 <body>
 
@@ -143,9 +185,13 @@
         <h4>Crescimento de Clientes</h4>
         <div id="graficoColuna" class="sombra"></div>
       </div>
-      <div class="col-md-12">
+      <div class="col-md-6">
         <h4>Crescimento de Clientes</h4>
         <div id="curve_chart" class="sombra"></div>
+      </div>
+      <div class="col-md-6">
+        <h4>Crescimento de Clientes</h4>
+        <div id="barchart_values" class="sombra"></div>
       </div>
     </div>
   </div>
