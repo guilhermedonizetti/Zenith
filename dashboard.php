@@ -41,7 +41,7 @@
         <ul class="menu-list">
           <li><a href="index.html"><img width="120px" height="50px" src="img/logo.png" alt="Zenith"></a></li>
           <li>
-            <a href="dashboard.php">Dashboard</a>
+            <a href="dashboard.php?pagina=pagina">Dashboard</a>
           </li>
           <li>
             <a href="dev.html">Desenvolvedores</a>
@@ -114,12 +114,13 @@
             break;
 
             case 'clientes':
-            include 'vendas.php';
+              echo '<h2> Dados dos Clientes</h2>';
+            include 'clientes.php';
             break;
 
             case 'vendas':
-
-            include 'cadastro_vendas.php';
+              echo '<h2>Dados das Vendas</h2>';
+              include 'vendas.php';
             break;
             case 'dashclientes':
               echo '<h2> Dados dos Clientes</h2>';
