@@ -98,7 +98,7 @@
             $valor = $dados['quantidade'];
          
           ?>
-          ['<?php echo $quantidade ?>', <?php echo $valor ?>,'#000'],
+          ['<?php echo $quantidade ?>', <?php echo $valor ?>,'#00FF00 '],
        
         <?php } ?>
         ]);
@@ -115,8 +115,8 @@
         title: "",
         //width: 900,
         height: 200,
-        bar: {groupWidth: "20%"},
-        legend: { position: "top" },
+        bar: {groupWidth: "50%"},
+        legend: { position: "none" },
       };
       var chart = new google.visualization.ColumnChart(document.getElementById("graficoColuna"));
       chart.draw(view, options);
@@ -147,7 +147,7 @@
             $valor = $dados['quantidade'];
 
           ?>
-          ['<?php echo $quantidade ?>', <?php echo $valor ?>,'#000'],
+          ['<?php echo $quantidade ?>', <?php echo $valor ?>,'#f00'],
 
           <?php } ?>
         ]);
@@ -158,7 +158,7 @@
                        { calc: "stringify",
                          sourceColumn: 1,
                          type: "string",
-                         role: "annotation" },
+                         role: "none" },
                        2]);
 
       var options = {
@@ -166,7 +166,7 @@
         width: 300,
         height: 200,
         bar: {groupWidth: "65%"},
-        legend: { position: "top" },
+        legend: { position: "none" },
       };
       var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
       chart.draw(view, options);
