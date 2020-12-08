@@ -135,7 +135,7 @@
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ["Mês", "Quantidade", { role: "style" } ],
+        ["Quantidade", "Estado", { role: "style" } ],
         <?php
 
           include 'conexao.php';
@@ -143,11 +143,11 @@
           $buscar = mysqli_query($conexao,$sql);
 
           while ($dados = mysqli_fetch_array($buscar)) {
-            $quantidade = $dados['mes_cliente'];
-            $valor = $dados['quantidade'];
+            $estado = $dados['estado'];
+            $quantidade = $dados['quantidade'];
 
           ?>
-          ['<?php echo $quantidade ?>', <?php echo $valor ?>,'#f00'],
+          ['<?php echo $estado ?>',<?php echo $quantidade ?> ,'#f00'],
 
           <?php } ?>
         ]);
@@ -166,7 +166,7 @@
         width: 300,
         height: 200,
         bar: {groupWidth: "65%"},
-        legend: { position: "none" },
+        legend: { position: "top" },
       };
       var chart = new google.visualization.BarChart(document.getElementById("barchart_values"));
       chart.draw(view, options);
@@ -190,7 +190,7 @@
         <div id="curve_chart" class="sombra"></div>
       </div>
       <div class="col-md-6">
-        <h4>Crescimento de Clientes</h4>
+        <h4>Clientes por Estado</h4>
         <div id="barchart_values" class="sombra"></div>
       </div>
     </div>
