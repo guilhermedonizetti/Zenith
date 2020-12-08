@@ -31,7 +31,7 @@
         var options = {
           title: '',
          // curveType: 'function',
-         legend: { position: 'none' }
+         legend: { position: 'top' }
        };
 
        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
@@ -112,7 +112,7 @@
                        2]);
 
       var options = {
-        title: "População das Cidades",
+        title: "Quantidade de Clientes",
         //width: 900,
         height: 200,
         bar: {groupWidth: "20%"},
@@ -136,15 +136,15 @@
   <div class="container-fluid" style="margin-top: 40px">
     <div class="row">
       <div class="col-md-6">
-        <h4>Quantidade Venda</h4>
+        <h4>Quantidade de Clientes por Mês</h4>
         <div id="piechart" class="sombra"></div>
       </div>
       <div class="col-md-6">
-        <h4>Quantidade Venda</h4>
+        <h4>Crescimento de Clientes</h4>
         <div id="graficoColuna" class="sombra"></div>
       </div>
       <div class="col-md-12">
-        <h4>Gráfico de Clientes</h4>
+        <h4>Crescimento de Clientes</h4>
         <div id="curve_chart" class="sombra"></div>
       </div>
     </div>
