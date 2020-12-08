@@ -70,7 +70,7 @@
      
         ?>
            <li class="nav-item">
-              <a class="nav-link" href="?pagina=dashvendas" style="color:#000;text-decoration: none"> 
+              <a class="nav-link" href="?pagina=<?php echo $linha[0] ?>" style="color:#000;text-decoration: none"> 
 
                 <i class="fas fa-table"></i>
                 &nbsp;<?php echo $linha[0] ?>
@@ -114,7 +114,7 @@
             break;
 
             case 'clientes':
-            include 'cadastro_cliente.php';
+            include 'vendas.php';
             break;
 
             case 'vendas':
