@@ -114,6 +114,7 @@
             break;
 
             case 'clientes':
+              include 'dadosPanelcliente.php';
             include 'clientes.php';
             break;
 
