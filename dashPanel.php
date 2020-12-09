@@ -1,46 +1,53 @@
 <html>
-  <head>
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ['Mês', 'Quantidade'],
+<head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
 
-          <?php
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Mês', 'Quantidade'],
 
-          include 'conexao.php';
-          $sql = "SELECT * FROM vendas";
-          $buscar = mysqli_query($conexao,$sql);
+        <?php
 
-          while ($dados = mysqli_fetch_array($buscar)) {
+        include 'conexao.php';
+        $sql = "SELECT * FROM vendas";
+        $buscar = mysqli_query($conexao, $sql);
 
-            $mes = $dados['mes_venda'];
-            $quantidade = $dados['valor_venda'];
+        while ($dados = mysqli_fetch_array($buscar)) {
+
+          $mes = $dados['mes_venda'];
+          $quantidade = $dados['valor_venda'];
 
 
-            ?>
+        ?>
 
 
-            ['<?php echo $mes ?>',  <?php echo $quantidade ?>],
-          <?php } ?>
-          ]);
+          ['<?php echo $mes ?>', <?php echo $quantidade ?>],
+        <?php } ?>
+      ]);
 
-        var options = {
-          title: '',
-          //curveType: 'function',
-         legend: { position: 'none' }
-       };
+      var options = {
+        title: '',
+        //curveType: 'function',
+        legend: {
+          position: 'none'
+        }
+      };
 
-       var chart = new google.visualization.LineChart(document.getElementById('graficoCurvo'));
+      var chart = new google.visualization.LineChart(document.getElementById('graficoCurvo'));
 
-       chart.draw(data, options);
-     }
-   </script>
-   <script type="text/javascript">
-    google.charts.load('current', {'packages':['corechart']});
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript">
+    google.charts.load('current', {
+      'packages': ['corechart']
+    });
     google.charts.setOnLoadCallback(drawChart2);
 
     function drawChart2() {
@@ -51,7 +58,7 @@
 
         include 'conexao.php';
         $sql = "SELECT * FROM clientes";
-        $buscar = mysqli_query($conexao,$sql);
+        $buscar = mysqli_query($conexao, $sql);
 
         while ($dados = mysqli_fetch_array($buscar)) {
 
@@ -59,15 +66,15 @@
           $quantidade = $dados['quantidade'];
 
 
-          ?>
+        ?>
 
-          ['<?php echo $mes ?>',    <?php echo $quantidade ?>],
+          ['<?php echo $mes ?>', <?php echo $quantidade ?>],
         <?php } ?>
-        ]);
+      ]);
 
       var options = {
         title: '',
-        height:200 
+        height: 200
       };
 
       var chart = new google.visualization.PieChart(document.getElementById('graficoPizza'));
@@ -79,52 +86,61 @@
     }
   </script>
 
-  
- 
-<style type="text/css">
-    .sombra {
-      -webkit-box-shadow: 6px 9px 7px 0px rgba(176,176,176,0.75);
-      -moz-box-shadow: 6px 9px 7px 0px rgba(176,176,176,0.75);
-      box-shadow: 6px 9px 7px 0px rgba(176,176,176,0.75);
-    }
 
+
+  <style type="text/css">
+    .sombra {
+      -webkit-box-shadow: 6px 9px 7px 0px rgba(176, 176, 176, 0.75);
+      -moz-box-shadow: 6px 9px 7px 0px rgba(176, 176, 176, 0.75);
+      box-shadow: 6px 9px 7px 0px rgba(176, 176, 176, 0.75);
+    }
   </style>
   <script type="text/javascript">
-    google.charts.load("current", {packages:["corechart"]});
+    google.charts.load("current", {
+      packages: ["corechart"]
+    });
     google.charts.setOnLoadCallback(drawChart);
+
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ["Mês", "Valor total", { role: "annotation" } ],
+        ["Mês", "Valor total", {
+          role: "annotation"
+        }],
         <?php
 
-          include 'conexao.php';
-          $sql = "SELECT sum(valor_venda)from vendas as total_ano where ano_venda=2020;";
-          $buscar = mysqli_query($conexao,$sql);
-
-         
-            $valor_total = $dados['total_ano'];
-           
-
-          ?>
-          ['<?php echo ("2020") ?>', <?php echo $valor ?>,<?php echo $valor ?>],
+        include 'conexao.php';
+        $sql = "SELECT sum(valor_venda)from vendas as total_ano where ano_venda=2020;";
+        $buscar = mysqli_query($conexao, $sql);
 
 
-        ]);
-    
-
-        var options = {
-          title: '',
-          hAxis: {title: 'Ano',  titleTextStyle: {color: '#333'}},
-          vAxis: {minValue: 0}
-        };
-
-        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
-        chart.draw(data, options);
-      }
+        $valor_total = $dados['total_ano'];
 
 
+        ?>['<?php echo ("2020") ?>', <?php echo $valor ?>, <?php echo $valor ?>],
+
+
+      ]);
+
+
+      var options = {
+        title: '',
+        hAxis: {
+          title: 'Ano',
+          titleTextStyle: {
+            color: '#333'
+          }
+        },
+        vAxis: {
+          minValue: 0
+        }
+      };
+
+      var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
   </script>
 </head>
+
 <body>
 
   <div class="container-fluid" style="margin-top: 40px">
@@ -138,16 +154,14 @@
         <div id="graficoCurvo" class="sombra"></div>
       </div>
       <div class="col-md-12" style="margin-top:15px;">
-      <hr>
+        <hr>
         <h4>Total de Vendas por Ano</h4>
         <div id="chart_div" class="sombra"></div>
       </div>
-      
+
     </div>
   </div>
 
 </body>
+
 </html>
-
-
-  
